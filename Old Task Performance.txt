@@ -1,0 +1,38 @@
+M [0,1] 500s Train 0.1 Exp Noise
+ Initialization Complete  
+Performance:  82.1833333333 %
+Performance:  88.42 %
+Performance:  89.825 %
+Performance:  90.81 %
+Performance:  92.0183333333 %
+ Initialization Complete  
+Performance:  72.5566666667 %
+Performance:  78.9716666667 %
+Performance:  80.485 %
+Performance:  81.615 %
+Performance:  83.04 %
+ Initialization Complete  
+Performance:  89.1166666667 %
+Performance:  94.2016666667 %
+Performance:  95.55 %
+Performance:  96.29 %
+Performance:  97.755 %
+
+M [0.1,0.9] 500s Train 0.1 Exp Noise
+Performance:  79.745 %
+Performance:  86.3366666667 %
+Performance:  88.1283333333 %
+Performance:  89.285 %
+Performance:  90.6183333333 %
+
+Performance:  88.45 %
+Performance:  94.445 %
+Performance:  96.2483333333 %
+Performance:  97.5066666667 %
+Performance:  99.1666666667 %
+
+Performance:  79.8633333333 %
+Performance:  87.7133333333 %
+Performance:  90.3866666667 %
+Performance:  92.7166666667 %
+Performance:  94.245 %
