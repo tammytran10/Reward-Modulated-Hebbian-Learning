@@ -1,0 +1,12 @@
+README for Reward-Modulated-Hebbian-Learning
+
+Authors: Tammy Tran, Brad Theilman, and Nuttida Rungratsameetaweemana
+
+"Modification of a Reward-Modulated Hebbian Learning Rule as a Model of Working Memory"
+Final project for Bioengineering 260 - Neurodynamics, Fall 2014
+Abstract: http://www.isn.ucsd.edu/classes/beng260/2014/index.html
+
+Implementation of a recurrent neural network with random connections and reward-modulated Hebbian learning
+Target function is a delayed non-matching to sample task (as with animal behavioral tasks with two levers)
+Adapted from Hoerzer, Legenstein, and Maass (2014)
+
