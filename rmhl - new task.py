@@ -1,13 +1,12 @@
 import numpy as np
 import scipy as sp
-from scipy import signal
-from scipy.io import wavfile
 from numpy import linalg as LA
-import mpl_toolkits.mplot3d
-from scipy.integrate import odeint
 import pylab as plt
 
 # Authors: Tammy Tran, Nuttida Rungratsameetaweemana, Brad Theilman
+# Implementation of recurrent neural network with reward-modulated Hebbian learning
+# Target function is a delayed non-matching to sample task (as with animal behavioral tasks with two levers)
+# Adapted from Hoerzer, Legenstein, and Maass (2014)
 
 tau = 10.0  # time constant
 p = 0.1 # internal connectivity
@@ -124,15 +123,15 @@ class RNN:
             self.state = self.dNeurons(self.state, t)
     
 # Train Parameters
-dt = 1
+dt = 1 #ms
 
 train_trials = 90
 test_trials = 10
 num_trials = train_trials + test_trials
 
 stim_length = 5000.
-delay = stim_length + 10. #delay between end of one stimulus and begin of other within trial (ideal: stim_length + 10000)
-iti = stim_length + 20. #time between end and begin of trials(ideal: stim_length + 20000)
+delay = stim_length + 10. #delay between end of one stimulus and begin of other within trial (in real animals: stim_length + 10000)
+iti = stim_length + 20. #time between end and begin of trials (in real animals: stim_length + 20000)
 len_trial = delay + iti + 2
 
 pre_train_dur = 2000 # two seconds
@@ -238,7 +237,7 @@ maassnet.run_network()
 # Determine performance
 test_times = times[-post_train_dur:]
 test_times = test_times.astype(int)
-criterion = 0.25
+criterion = 0.25 # allowed |difference| between target and output function
 perform = sum(1. * (abs(maassnet.zsave[test_times] - f_target[test_times]) < criterion))/len(test_times)
 print 'Performance: ', str(perform * 100), '%'
 
